@@ -289,8 +289,8 @@ margin-bottom: 20px;
 }
 
 .coffeeroasters_operation_line{
-  width: 23em;
-  height: 0.2em;
+  width: 21.7em;
+  height: 0.08em;
   background-color: var(--pale-orange);
 }
 
@@ -374,10 +374,15 @@ footer{
 /* -------- ABOUT PAGE ----------- */
 /* -------- HERO SECTION ----------- */
 
-.about_hero_section{
+.other_hero_section{
   position: relative;
   height: 28em;
   margin-bottom: 5em;
+  
+}
+
+.other_hero_img{
+  width: 85em;
 }
 
 .hero_title h2{
@@ -460,6 +465,9 @@ footer{
   font-family: var(--font-barlow), 'sans-serif';
 }
 
+/* -------- LOCATION SECTION ----------- */
+
+
 .coffeeroasters_operation_process_type h4{
   font-size: var(--title-h4);
 }
@@ -477,4 +485,99 @@ footer{
   margin-top: 2em;
   margin-bottom: 2em;
   font-family: var(--font-fraunces), serif;
+}
+
+
+/* -------- END OF ABOUT PAGE ---------- */
+
+
+/* -------- START OF PLAN PAGE ---------- */
+
+.plan_section{
+  margin-bottom: 8em;
+}
+
+.plan_coffeeroasters_operation{
+  padding: 8em;
+  width: 85em;
+}
+
+.plan_coffeeroasters_operation{
+  background-color: var(--middle-bg-color);
+}
+
+.plan_coffeeroasters_operation_oval{
+  height: 1em;
+  width: 1em;
+  border-radius: 50%;
+  border: 1px solid var(--dark-cyan);
+}
+
+.plan_coffeeroasters_operation_line{
+  width: 24em;
+  height: 0.08em;
+  background-color: var(--pale-orange);
+}
+
+.plan_coffeeroasters_operation_process{
+  display: flex;
+}
+
+.plan_coffeeroasters_operation_process_type{
+  margin-right: 4.5em;
+}
+
+.plan_coffeeroasters_operation_process_type h2{
+  font-family: var(--font-fraunces), serif;
+  font-size: var(--title-h2);
+  color: var(--pale-orange);
+  margin-bottom: 1em;
+
+}
+
+.plan_coffeeroasters_operation_process_type h3{
+  font-family: var(--font-fraunces), serif;
+  width: 7em;
+  font-size: var(--title-h3);
+  margin-bottom: 1em;
+  color: var(--light-cream);
+}
+
+.plan_coffeeroasters_operation_process_type p{
+  font-family: var(--font-barlow), 'sans-serif';
+  line-height: 1.5;
+  width: 20em;
+  color: var(--light-cream);
+}
+
+.plan_division{
+  position: relative;
+}
+
+
+.plan_coffeeroasters_operation_semiline{
+  position: absolute;
+  bottom: 7.5px;
+  width: 0.859em;
+  z-index: 2;
+  height: 0.07em;
+  background-color: var(--pale-orange);
+}
+
+.plan_coffeeroasters_operation_semi {
+  position: absolute;
+  bottom: 7.5px;
+  z-index: 2;
+  width: 0.435em;
+  height: 0.07em;
+  background-color: var(--pale-orange);
+  left: 8px;
+}
+
+.plan_coffeeroasters_operation_semi_right{
+  position: absolute;
+  bottom: 7.5px;
+  background-color: var(--pale-orange);
+  width: 0.435em;
+  height: 0.07em;
 }
