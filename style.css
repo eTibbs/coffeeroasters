@@ -35,6 +35,7 @@
 
 body{
   margin: 0 80px;
+  background-color: var(--light-cream);
 }
 
 header{
@@ -67,5 +68,100 @@ li{
   letter-spacing: var(--navigation-menu-letter-spacing);
 }
 
+.hero_section{
+  position: relative;
+  font-family: 'Fraunces', serif;
+}
+
+.hero_img{
+  width: 85em;
+  height: 37.5em;
+}
+
+.hero_title{
+  position: absolute;
+  top: 10em;
+  left: 7em;
+}
+
+.hero_title h1{
+  color: var(--light-cream);
+  font-size: var(--title-h1);
+  width: 7em;
+  margin-bottom: 10px;
+}
+
+.hero_title p{
+  width: 30em;
+  color: var(--light-cream);
+  font-size: 12px;
+  font-family: 'Barlow', sans-serif;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+.hero_title button{
+  width: 13em;
+  height: 3.5em;
+  background-color: var(--dark-cyan);
+  border-radius: 10px;
+  color: var(--light-cream);
+  font-family: 'Fraunces', serif;
+  cursor: pointer;
+}
+
+.collection_section{
+  width: 60em;
+  height: 32em;
+  margin: 6em 13em;
+  position: relative;
+}
+
+.collection_text{
+  position: relative;
+  height: 12em;
+}
+
+.collection_text p{
+  font-size: var(--title-alternate-big);
+  text-align: center;
+  opacity: 0.5032;
+  color: var(--grey);
+  font-family: 'Fraunces', serif;
+  mix-blend-mode: multiply;
+  position: relative;
+  z-index: 2;
+}
+
+.collection_type{
+  display: flex;
+  width: 100%;
+  position: absolute;
+  top: 7em;
+  justify-content: center;
+  align-items: center;
+}
 
 
+.collection_type_coffee_img{
+  width: 12em;
+  height: 10em;
+  margin-left: 30px;
+}
+
+.collection_type_coffee_text{
+  text-align: center;
+  margin-top: 60px;
+}
+
+.collection_type_coffee_text h4{
+font-size: var(--title-h4);
+color: var(--dark-grey-blue);
+font-family: 'Fraunces', serif;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.collection_type_coffee_text p{
+  font-family: 'Barlow', sans-serif;
+}
