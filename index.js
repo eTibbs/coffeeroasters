@@ -15,7 +15,6 @@ for (let i=0; i<accordion.length; i++){
   })
 }
 
-
 const firstOption = document.getElementsByClassName("preference")
 
 for (let option of firstOption){

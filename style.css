@@ -607,6 +607,7 @@ footer{
   width: 38em;
 }
 
+
 .coffee_type_options{
   padding: 1.5em;
   width: 12em;
@@ -633,28 +634,18 @@ footer{
   font-size: var(--title-h3);
   cursor: pointer;
 }
-
-.accordion{
-  position: relative;
-}
-
 .coffee_type{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
+
 /*---------------Accordion ------------------*/
 
-/* .accordion{
-  transition: 0.8s;
-} */
-
-/* .accordion_data{
-  display: none;
-  overflow: hidden;
-} */
-
+.accordion{
+  position: relative;
+}
 
 
 .question::after{
@@ -673,10 +664,12 @@ footer{
 
 
 .accordion.active .question::after {
-  transition: 0.8s;
   content: url(/assets/plan/desktop/icon-arrow-up.svg);
+  transition: 0.8s;
 } 
 
 .active_color {
-  background-color: rebeccapurple;
+  background-color: var(--dark-cyan);
+  transition: 0.8s;
+
 }
