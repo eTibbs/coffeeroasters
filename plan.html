@@ -78,20 +78,21 @@
 
   <section class="coffee_selection">
     <section class="coffee_selection_type">
-      <h4><span>01</span> Preferences</h4>
+      <h4 class="type type1"><span>01</span>Preferences</h4>
       <hr />
-      <h4 class="type"><span>02</span> Bean Type</h4>
+      <h4 class="type type2"><span>02</span> Bean Type</h4>
       <hr />
-      <h4 class="type"><span>03</span> Quantity</h4>
+      <h4 class="type type3"><span>03</span> Quantity</h4>
       <hr />
-      <h4 class="type"><span>04</span> Grind Option</h4>
+      <h4 class="type type4"><span>04</span> Grind Option</h4>
       <hr />
-      <h4 class="type"><span>05</span> Deliveries</h4>
+      <h4 class="type type5"><span>05</span> Deliveries</h4>
       <hr />
     </section>
+
     <section class="coffee_selection_options">
       <div class="coffee_selection_questions">
-        <div class="accordion">
+        <div id="pref" class="accordion">
           <h3 class="question">How do you drink your coffee?</h3>
         </div>
         <div class="coffee_type accordion_data">
@@ -109,82 +110,126 @@
           </div>
         </div>
       </div>
-      
+      <div class="coffee_selection_questions">
+        <div class="accordion">
+          <h3 class="question">What type of coffee?</h3>
+        </div>
+        <div class="coffee_type accordion_data">
+          <div class="coffee_type_options bean">
+            <p class="head">Single origin</p>
+            <p class="description">Distinct, high quality coffee from a specific family-owned farm</p>
+          </div>
+          <div class="coffee_type_options bean">
+            <p class="head">Decaf</p>
+            <p class="description">Just like regular coffee, except the caffeine has been removed</p>
+          </div>
+          <div class="coffee_type_options bean">
+            <p class="head">Blended</p>
+            <p class="description">Combination of two or three dark roasted beans of organic coffees</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="coffee_selection_questions">
+        <div class="accordion">
+          <h3 class="question">How much would you like?</h3>
+        </div>
+        <div class="coffee_type accordion_data">
+          <div class="coffee_type_options quantity">
+            <p class="head">250g</p>
+            <p class="description">Perfect for the solo drinker. Yields about 12 delicious cups.</p>
+          </div>
+          <div class="coffee_type_options quantity">
+            <p class="head">500g</p>
+            <p class="description">Perfect option for a couple. Yields about 40 delectable cups.</p>
+          </div>
+          <div class="coffee_type_options quantity">
+            <p class="head">1000g</p>
+            <p class="description">Perfect for offices and events. Yields about 90 delightful cups.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="coffee_selection_questions">
+        <div class="accordion">
+          <h3 class="question">Want us to grind them?</h3>
+        </div>
+        <div class="coffee_type accordion_data">
+          <div class="coffee_type_options grind">
+            <p class="head">Wholebean</p>
+            <p class="description">Best choice if you cherish the full sensory experience</p>
+          </div>
+          <div class="coffee_type_options grind">
+            <p class="head">Filter</p>
+            <p class="description">For drip or pour-over coffee methods such as V60 or Aeropress</p>
+          </div>
+          <div class="coffee_type_options grind">
+            <p class="head">Cafetiére</p>
+            <p class="description">Course ground beans specially suited for french press coffee</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="coffee_selection_questions">
+        <div class="accordion">
+          <h3 class="question"> How often should we deliver?</h3>
+        </div>
+        <div class="coffee_type accordion_data">
+          <div class="coffee_type_options deliver">
+            <p class="head">Every week</p>
+            <p class="description">$14.00 per shipment. Includes free first-class shipping.</p>
+          </div>
+          <div class="coffee_type_options deliver">
+            <p class="head">Every 2 weeks</p>
+            <p class="description">$17.25 per shipment. Includes free priority shipping.</p>
+          </div>
+          <div class="coffee_type_options deliver">
+            <p class="head">Every month</p>
+            <p class="description">$22.50 per shipment. Includes free priority shipping.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="order_summary">
+        <div class="order_summary_div">
+          <p class="order_summary_text">ORDER SUMMARY</p>
+          <div class="order_summary_info">
+            <h4 class="order_text">“I drink coffee <span id="answer1" class="answer">________</span>, 
+              with a <span id="answer2" class="answer">________</span> type of bean. <span id="answer3" class="answer">________</span> ground ala <span id="answer4" class="answer">________</span>, 
+              sent to me <span id="answer5" class="answer">________</span>.”
+            </h4>
+          </div>
+        </div>
+      </div>
     </section>
   </section>
-  <section>
-    <p><span id="answer"></span> got selected</p>
+  <section class="create_plan_plan">
+    <a id="modalbtn" class="button plan_create">Create your plan!</a>
+  </section>
+
+
+  <section id="modal" class="modal_content">
+    <div class="modal_div">
+      <div class="modal_heading">
+        <h3>Order Summary</h3>
+      </div>
+      <div class="modal_order_summary">
+        <h4 class="modal_order_text">“I drink coffee <span id="modal1" class="answer">________</span>, 
+          with a <span id="modal2" class="answer">________</span> type of bean. <span id="modal3" class="answer">________</span> ground ala <span id="modal4" class="answer">________</span>, 
+          sent to me <span id="modal5" class="answer">________</span>.”
+        </h4>
+      </div>
+      <p class="modal_correct_order">Is this correct? You can proceed to checkout or go back to plan selection if something 
+        is off. Subscription discount codes can also be redeemed at the checkout.</p>
+
+      <div class="checkout">
+        <h3>$14.00/mo</h3>
+        <a class="button" href="plan.html">Checkout</a>
+      </div>
+    </div>
   </section>
 
   
-
-  
-
-  
-
-  
-
-  What type of coffee?
-
-  Single origin
-  Distinct, high quality coffee from a specific family-owned farm
-
-  Decaf
-  Just like regular coffee, except the caffeine has been removed
-
-  Blended
-  Combination of two or three dark roasted beans of organic coffees
-
-  How much would you like?
-  250g
-  Perfect for the solo drinker. Yields about 12 delicious cups.
-  
-  500g
-  Perfect option for a couple. Yields about 40 delectable cups.
-
-  1000g
-  Perfect for offices and events. Yields about 90 delightful cups.
-
-  Want us to grind them?
-
-  Wholebean
-  Best choice if you cherish the full sensory experience
-
-  Filter
-  For drip or pour-over coffee methods such as V60 or Aeropress
-
-  Cafetiére
-  Course ground beans specially suited for french press coffee
-
-  How often should we deliver?
-
-  Every week
-  $14.00 per shipment. Includes free first-class shipping.
-
-  Every 2 weeks
-  $17.25 per shipment. Includes free priority shipping.
-
-  Every month
-  $22.50 per shipment. Includes free priority shipping.
-
-  Order Summary
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____, 
-  sent to me _____.”
-
-  Create my plan!
-
-  <!-- Modal -->
-  Order Summary
-
-  “I drink coffee _____, with a _____ type of bean. _____ ground ala _____,
-  sent to me _____.”
-
-  Is this correct? You can proceed to checkout or go back to plan selection if something 
-  is off. Subscription discount codes can also be redeemed at the checkout.
-
-  $_____/month
-
-  Checkout
   <!-- End modal -->
 
   <footer>
