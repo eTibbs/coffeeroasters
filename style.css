@@ -369,6 +369,11 @@ footer{
   justify-content: space-around;
 }
 
+.footer_social:hover{
+  /* filter: invert(0.2) sepia(0.5); */
+  filter: invert(0.25) sepia(0.8);
+}
+
 /* -------- END OF INDEX PAGE ---------- */
 
 /* -------- ABOUT PAGE ----------- */
@@ -669,7 +674,7 @@ footer{
 .accordion_data{
   display: none;
   overflow: hidden;
-  transition: 4s;
+  transition: 0.4s;
 }
 
 
@@ -680,7 +685,7 @@ footer{
 
 .active_color {
   background-color: var(--dark-cyan);
-  transition: 0.8s;
+  transition: 0.4s;
   
 }
 
@@ -761,7 +766,6 @@ footer{
 
   border-radius: 0.4em;
   margin: auto;
-  /* padding: 20px; */
   border: 1px solid #888;
   width: 50%;
   height: 30em;

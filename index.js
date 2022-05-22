@@ -1,6 +1,7 @@
 
 
 const accordion = document.getElementsByClassName('accordion')
+
 function accordionfn(){
   for (let i=0; i<accordion.length; i++){
     accordion[i].addEventListener('click', function(){
