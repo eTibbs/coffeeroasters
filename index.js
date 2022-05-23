@@ -3,6 +3,23 @@
 const accordion = document.getElementsByClassName('accordion')
 
 
+const prefBtn = document.querySelector(".type1")
+const beanBtn = document.querySelector(".type2")
+const quantityBtn = document.querySelector(".type3")
+const grindBtn = document.querySelector(".type4")
+const deliveryBtn = document.querySelector(".type5")
+
+
+const preferences = document.getElementsByClassName("preference")
+const beanType = document.getElementsByClassName("bean")
+const quantity = document.getElementsByClassName("quantity")
+const grindOption = document.getElementsByClassName("grind")
+const deliveries = document.getElementsByClassName("deliver")
+
+
+const modal = document.getElementById('modal')
+const modalBtn = document.getElementById("modalbtn")
+
 
 function accordionfn(){
   for (let i=0; i<accordion.length; i++){
@@ -19,18 +36,19 @@ function accordionfn(){
   }
 }
 
+function sideAccordion(el, index){
+  el.addEventListener('click', function(){
+    accordion[index].classList.toggle('active');
+    let accordion_data = accordion[index].nextElementSibling;
 
+    if (accordion_data.style.display === "flex"){
+      accordion_data.style.display = "none";
+    } else {
+      accordion_data.style.display = "flex";
+    }
+  })
+}
 
-
-accordionfn()
-
-
-
-const preferences = document.getElementsByClassName("preference")
-const beanType = document.getElementsByClassName("bean")
-const quantity = document.getElementsByClassName("quantity")
-const grindOption = document.getElementsByClassName("grind")
-const deliveries = document.getElementsByClassName("deliver")
 
 function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo, totalCharge=""){
   for (let option of classNameList){
@@ -54,6 +72,26 @@ function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo, tot
 }
 
 
+modalBtn.onclick = function(){
+  modal.style.display = 'block'
+}
+
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+
+
+
+sideAccordion(prefBtn, 0)
+sideAccordion(beanBtn, 1)
+sideAccordion(quantityBtn, 2)
+sideAccordion(grindBtn, 3)
+sideAccordion(deliveryBtn, 4)
+
+accordionfn()
+
 
 orderSummaryData(preferences, 'answer1', 'modal1')
 orderSummaryData(beanType, 'answer2', 'modal2')
@@ -64,16 +102,6 @@ orderSummaryData(deliveries, 'answer5', 'modal5', 'total_charge')
 
 
 
-const modal = document.getElementById('modal')
-const modalBtn = document.getElementById("modalbtn")
 
-modalBtn.onclick = function(){
-  modal.style.display = 'block'
-}
 
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
 
