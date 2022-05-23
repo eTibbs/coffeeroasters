@@ -188,6 +188,10 @@ margin-bottom: 20px;
   font-family: 'Barlow', sans-serif;
 }
 
+.pref_span{
+  color: var(--dark-cyan);
+}
+
 /* -------- COFFEEROASTERS SECLECTION SECTION ---------- */
 
 .selection_reasons{
@@ -372,6 +376,10 @@ footer{
 .footer_social:hover{
   /* filter: invert(0.2) sepia(0.5); */
   filter: invert(0.25) sepia(0.8);
+}
+
+.footer_li:hover{
+  color: var(--light-cream);
 }
 
 /* -------- END OF INDEX PAGE ---------- */
@@ -667,6 +675,14 @@ footer{
 }
 
 
+.disable_button{
+  background-color: var(--button-disabled);
+  color: var(--light-cream);
+  pointer-events: none;
+  border: var(--button-disabled);
+}
+
+
 /*---------------Accordion ------------------*/
 
 .accordion{
@@ -697,6 +713,7 @@ footer{
 .active_color {
   background-color: var(--dark-cyan);
   transition: 0.4s;
+  color: var(--light-cream);
   
 }
 
@@ -791,7 +808,7 @@ footer{
   font-family: var(--font-fraunces), serif;
   color: var(--light-cream);
   padding-left: 2em;
-  padding-top: 1em;
+  padding-top: 0.8em;
   height: 3em;
 }
 

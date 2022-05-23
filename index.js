@@ -1,5 +1,3 @@
-
-
 const accordion = document.getElementsByClassName('accordion')
 const types = document.getElementsByClassName('type')
 const preferences = document.getElementsByClassName("preference")
@@ -15,7 +13,29 @@ const quantityBtn = document.querySelector(".type3")
 const grindBtn = document.querySelector(".type4")
 const deliveryBtn = document.querySelector(".type5")
 
+const pref = document.getElementById("answer1").innerHTML
+const btn = document.querySelector(".plan_create")
+console.log(btn)
+// console.log(pref)
+if (pref === "Capsules"){
+  console.log(btn)
+  // btn.style.pointerEvents="none"
+  btn.classList.add("disable_button")
+  // btn.disabled = true
+} else {
+  btn.classList.remove("disable_button")
+}
 
+const grind = document.getElementsByClassName("grind_op")
+// if (pref === "Capsule"){
+//   for (let g of grind){
+//     g.classList.add("disable_grind")
+//   }
+// } else {
+//   for (let g of grind){
+//       g.classList.remove("disable_grind")
+//   }
+// }
 
 
 const modal = document.getElementById('modal')
@@ -69,6 +89,7 @@ function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo, tot
         option.classList.remove('active_color')
       }
         option.classList.add('active_color')
+
         const value = option.children[0].innerHTML
         console.log(value)
         
@@ -76,17 +97,14 @@ function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo, tot
         document.getElementById(elementIdNameOne).innerHTML = value
         document.getElementById(elementIdNameTwo).innerHTML = value
         
-        const grind = document.getElementsByClassName("grind_op")
-        // const grind_div = document.querySelector(".grind_div")
         if (value == "Capsule"){
           for (let g of grind){
             g.classList.add("disable_grind")
-            // grind_div.classList.add("disable_grind")
+            document.getElementById("answer4").innerHTML = "________"
           }
         } else {
           for (let g of grind){
             g.classList.remove("disable_grind")
-            // grind_div.classList.remove("disable_grind")
           }
         }
 
@@ -129,10 +147,3 @@ orderSummaryData(beanType, 'answer2', 'modal2')
 orderSummaryData(quantity, 'answer3', 'modal3')
 orderSummaryData(grindOption, 'answer4', 'modal4')
 orderSummaryData(deliveries, 'answer5', 'modal5', 'total_charge')
-
-
-
-
-
-
-
