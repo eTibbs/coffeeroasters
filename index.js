@@ -1,6 +1,12 @@
 
 
 const accordion = document.getElementsByClassName('accordion')
+const types = document.getElementsByClassName('type')
+const preferences = document.getElementsByClassName("preference")
+const beanType = document.getElementsByClassName("bean")
+const quantity = document.getElementsByClassName("quantity")
+const grindOption = document.getElementsByClassName("grind")
+const deliveries = document.getElementsByClassName("deliver")
 
 
 const prefBtn = document.querySelector(".type1")
@@ -10,11 +16,6 @@ const grindBtn = document.querySelector(".type4")
 const deliveryBtn = document.querySelector(".type5")
 
 
-const preferences = document.getElementsByClassName("preference")
-const beanType = document.getElementsByClassName("bean")
-const quantity = document.getElementsByClassName("quantity")
-const grindOption = document.getElementsByClassName("grind")
-const deliveries = document.getElementsByClassName("deliver")
 
 
 const modal = document.getElementById('modal')
@@ -47,6 +48,17 @@ function sideAccordion(el, index){
       accordion_data.style.display = "flex";
     }
   })
+}
+
+function typesColor(classNameList){
+  for (let option of classNameList){
+    option.addEventListener('click', function(){
+    for (let option of classNameList){
+      option.classList.remove('option_color')
+    }
+    option.classList.add('option_color')
+  })
+  }
 }
 
 
@@ -91,6 +103,8 @@ sideAccordion(grindBtn, 3)
 sideAccordion(deliveryBtn, 4)
 
 accordionfn()
+
+typesColor(types)
 
 
 orderSummaryData(preferences, 'answer1', 'modal1')

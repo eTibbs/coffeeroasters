@@ -640,6 +640,8 @@ footer{
 
 .type{
   margin-top: 0.7em;
+  cursor: pointer;
+  color: var(--grey);
 }
 
 .question{
@@ -653,6 +655,10 @@ footer{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.option_color{
+  color: var(--dark-grey-blue);
 }
 
 
@@ -734,6 +740,7 @@ footer{
   position: absolute;
   cursor: pointer;
 }
+
 
 .create_plan_plan{
   margin-bottom: 12em;
