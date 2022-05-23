@@ -15,28 +15,21 @@ const deliveryBtn = document.querySelector(".type5")
 
 const pref = document.getElementById("answer1").innerHTML
 const btn = document.querySelector(".plan_create")
-console.log(btn)
-// console.log(pref)
-if (pref === "Capsules"){
-  console.log(btn)
-  // btn.style.pointerEvents="none"
-  btn.classList.add("disable_button")
-  // btn.disabled = true
-} else {
-  btn.classList.remove("disable_button")
-}
 
-const grind = document.getElementsByClassName("grind_op")
-// if (pref === "Capsule"){
-//   for (let g of grind){
-//     g.classList.add("disable_grind")
-//   }
-// } else {
-//   for (let g of grind){
-//       g.classList.remove("disable_grind")
+// function dis(){
+//   if (pref !== "Capsule" || pref !== "Filter" || pref !== "Espresso" ){
+//     console.log(btn)
+//     btn.style.pointerEvents="none"
+//     btn.classList.add("disable_button")
+//     btn.disabled = true
+//   } else {
+//     btn.classList.remove("disable_button")
 //   }
 // }
 
+// dis()
+
+const grind = document.getElementsByClassName("grind_op")
 
 const modal = document.getElementById('modal')
 const modalBtn = document.getElementById("modalbtn")
@@ -96,8 +89,10 @@ function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo, tot
         
         document.getElementById(elementIdNameOne).innerHTML = value
         document.getElementById(elementIdNameTwo).innerHTML = value
-        
-        if (value == "Capsule"){
+
+        const coffee = document.getElementById("answer1").innerHTML
+
+        if (coffee === "Capsule"){
           for (let g of grind){
             g.classList.add("disable_grind")
             document.getElementById("answer4").innerHTML = "________"
