@@ -661,6 +661,11 @@ footer{
   color: var(--dark-grey-blue);
 }
 
+.disable_grind{
+  color: var(--button-disabled);
+  pointer-events: none;
+}
+
 
 /*---------------Accordion ------------------*/
 

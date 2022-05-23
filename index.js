@@ -70,8 +70,25 @@ function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo, tot
       }
         option.classList.add('active_color')
         const value = option.children[0].innerHTML
+        console.log(value)
+        
+        
         document.getElementById(elementIdNameOne).innerHTML = value
         document.getElementById(elementIdNameTwo).innerHTML = value
+        
+        const grind = document.getElementsByClassName("grind_op")
+        // const grind_div = document.querySelector(".grind_div")
+        if (value == "Capsule"){
+          for (let g of grind){
+            g.classList.add("disable_grind")
+            // grind_div.classList.add("disable_grind")
+          }
+        } else {
+          for (let g of grind){
+            g.classList.remove("disable_grind")
+            // grind_div.classList.remove("disable_grind")
+          }
+        }
 
         const opt = option.children[1].innerHTML
 
