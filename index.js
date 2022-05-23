@@ -7,6 +7,8 @@ const grindOption = document.getElementsByClassName("grind")
 const deliveries = document.getElementsByClassName("deliver")
 
 
+// console.log(grindOption)
+
 const prefBtn = document.querySelector(".type1")
 const beanBtn = document.querySelector(".type2")
 const quantityBtn = document.querySelector(".type3")
@@ -14,22 +16,12 @@ const grindBtn = document.querySelector(".type4")
 const deliveryBtn = document.querySelector(".type5")
 
 const pref = document.getElementById("answer1").innerHTML
-const btn = document.querySelector(".plan_create")
+// const btn = document.querySelector(".plan_create")
 
-// function dis(){
-//   if (pref !== "Capsule" || pref !== "Filter" || pref !== "Espresso" ){
-//     console.log(btn)
-//     btn.style.pointerEvents="none"
-//     btn.classList.add("disable_button")
-//     btn.disabled = true
-//   } else {
-//     btn.classList.remove("disable_button")
-//   }
-// }
-
-// dis()
 
 const grind = document.getElementsByClassName("grind_op")
+const grind_div = document.getElementById("grind_div")
+const grind_accord = document.querySelector(".grind_accord")
 
 const modal = document.getElementById('modal')
 const modalBtn = document.getElementById("modalbtn")
@@ -83,19 +75,35 @@ function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo, tot
       }
         option.classList.add('active_color')
 
+        console.log(option)
+
         const value = option.children[0].innerHTML
-        console.log(value)
+
+        if (value === 'Cafetiére'){
+          document.querySelector(".sentence").innerHTML = `ground a la`
+          document.getElementById(elementIdNameOne).innerHTML = value
+          document.getElementById(elementIdNameTwo).innerHTML = value
+        } else {
+          // document.querySelector(".sentence").innerHTML = ""
+          document.getElementById(elementIdNameOne).innerHTML = value
+          document.getElementById(elementIdNameTwo).innerHTML = value
+        }
         
-        
-        document.getElementById(elementIdNameOne).innerHTML = value
-        document.getElementById(elementIdNameTwo).innerHTML = value
 
         const coffee = document.getElementById("answer1").innerHTML
 
         if (coffee === "Capsule"){
+          for (let option of grindOption){
+            option.classList.remove('active_color')
+          }
+          document.querySelector(".sentence").innerHTML = ""
+          if (grind_div.style.display === "flex"){
+            grind_accord.classList.remove('active')
+            grind_div.style.display = "none"
+          }
           for (let g of grind){
             g.classList.add("disable_grind")
-            document.getElementById("answer4").innerHTML = "________"
+            document.getElementById("answer4").innerHTML = ""
           }
         } else {
           for (let g of grind){
