@@ -1,4 +1,4 @@
-:root{
+ :root{
   --dark-cyan: #0E8784;
   --dark-grey-blue: #333D4B;
   --pale-orange: #FDD6BA;
@@ -39,7 +39,7 @@
 body{
   margin: 0 80px;
   background-color: var(--light-cream);
-}
+} 
 
 /* -------- INDEX PAGE ---------- */
 
@@ -73,7 +73,7 @@ a{
 li{
   list-style: none;
   letter-spacing: var(--navigation-menu-letter-spacing);
-}
+} 
 
 /* -------- HERO SECTION ---------- */
 
@@ -82,8 +82,9 @@ li{
 }
 
 .hero_img{
-  width: 85em;
   height: 37.5em;
+  background-image: url(/assets/home/desktop/image-hero-coffeepress.jpg);
+  background-size: cover;
 }
 
 .hero_title{
@@ -108,7 +109,7 @@ li{
   margin-bottom: 30px;
   font-weight: 400;
   line-height: 2;
-}
+} 
 
 .button{
   width: 13em;
@@ -201,7 +202,7 @@ margin-bottom: 20px;
 }
 
 .selection_reason_text{
-  width: 85em;
+  width: 86em;
   height: 36em;
   display: flex;
   flex-direction: column;
@@ -237,8 +238,6 @@ margin-bottom: 20px;
   justify-content: space-around;
 }
 
-
-
 .selection_qualities_feature{
   height: 23em;
   width: 21em;
@@ -263,7 +262,7 @@ margin-bottom: 20px;
   font-family: var(--font-barlow), 'sans-serif';
   margin: 0 auto;
   line-height: 2;
-}
+} 
 
 /* -------- COFFEEROASTERS OPERATION SECTION ---------- */
 
@@ -328,7 +327,8 @@ margin-bottom: 20px;
   line-height: 1.5;
   width: 20em;
   color: var(--dark-grey-blue);
-}
+} 
+
 
 /* -------- FOOTER SECTION ---------- */
 footer{
@@ -374,13 +374,12 @@ footer{
 }
 
 .footer_social:hover{
-  /* filter: invert(0.2) sepia(0.5); */
   filter: invert(0.25) sepia(0.8);
 }
 
 .footer_li:hover{
   color: var(--light-cream);
-}
+} 
 
 /* -------- END OF INDEX PAGE ---------- */
 
@@ -403,7 +402,8 @@ footer{
   font-size: var(--title-h2);
   width: 7em;
   margin-bottom: 10px;
-}
+} 
+
 
 /* -------- COMMITMENT SECTION ----------- */
 
@@ -430,7 +430,7 @@ footer{
   width: 32em;
   font-family: var(--font-barlow);
   color: var(--dark-grey-blue);
-}
+} 
 
 
 /* -------- QUALITY SECTION ----------- */
@@ -476,7 +476,7 @@ footer{
   color: var(--light-cream);
   line-height: 1.5;
   font-family: var(--font-barlow), 'sans-serif';
-}
+} 
 
 /* -------- LOCATION SECTION ----------- */
 
@@ -636,7 +636,7 @@ footer{
 .coffee_type_options:hover{
   background-color: var(--pale-orange);
   transition: 0.1s;
-}
+} 
 
 .head{
   margin-bottom: 1em;
@@ -771,9 +771,9 @@ footer{
 
 /* ----------- MODAL CONTENT ---------*/
 
+/* height: 50em;
+width: 33em; */
 .modal_content{
-  /* height: 50em;
-  width: 33em; */
   background-color: var(--light-cream);
   margin: auto;
 
@@ -845,3 +845,213 @@ footer{
   font-size: var(--title-h3);
   font-family: var(--font-fraunces), 'serif';
 }
+
+
+
+@media only screen and (max-width: 480px) {
+  body {
+      width: 19em;
+      margin: 0 auto;
+  }
+
+  .mobile_menu{
+    display: none;
+  }
+
+  header{
+    width: 100%;
+  }
+
+  .header_img{
+    width: 10em;
+  }
+  
+  .hero_img{
+    background-image: url(/assets/home/mobile/image-hero-coffeepress.jpg);
+    height: 28em;
+    background-size: cover;
+    border-radius: 0.5em;
+    }
+
+  .hero_title{
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    font-size: 10px;
+    align-items: center;
+    justify-content: center;
+    height: 25em;
+  }
+  
+  .hero_title h1{
+    font-size: var(--title-h4);
+  }
+
+  .hero_title p{
+    width: 18em;
+    font-size: 1.5em;
+  }
+
+  .button{
+    height: 5em;
+    font-size: 1.5em;
+  }
+
+  .collection_section{
+    width: 100%;
+    margin: 0;
+    margin-top: 6em;
+  }
+
+  .collection_text{
+    height: 5em;
+  }
+
+  .collection_text p {
+    font-size: 2.5em;
+  }
+
+  .collection_type{
+    flex-direction: column;
+  }
+
+  .collection_type_coffee_text{
+    margin-bottom: 2em;
+    margin-top: 1em;
+  }
+
+  .selection_reasons{
+    margin-top: 55em;
+  }
+  
+  .selection_reason_text{
+    height: 65em;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+  }
+
+  .selection_reason_text h3{
+    font-size: 1.8em;
+  }
+
+  .selection_reason_text p{
+    font-size: 1em;
+    width: 18em;
+  }
+
+  .selection_qualities{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    margin: -60em auto;
+  }
+  
+  .selection_qualities_feature{
+    width: 100%;
+    margin-bottom: 2em;
+    height: 25em;
+  }
+
+  .selection_qualities_feature_text p{
+    width: 12em;
+  }
+
+  .coffeeroasters_operation{
+    margin-top: 65em;
+    width: 100%;
+  }
+
+  .coffeeroasters_operation h3{
+    text-align: center;
+  }
+
+  .coffeeroasters_operation_division{
+    display: none;
+  }
+
+  .coffeeroasters_operation_process{
+    flex-direction: column;
+    left: 0;
+    right: 0;
+    margin: 3em 0;
+  }
+  
+  .coffeeroasters_operation_process_type{
+    margin: 2em 0;
+  }
+
+  .coffeeroasters_operation_process_type h2{
+    text-align: center;
+  }
+
+  .coffeeroasters_operation_process_type h3{
+    font-size: 1.5em;
+    width: 100%;
+  }
+  
+  .coffeeroasters_operation_process_type p{
+    width: 100%;
+    text-align: center;
+  }
+
+  .home_button{
+    height: 3.2em;
+    width: 10em;
+    font-size: 1em;
+    margin: auto;
+    text-decoration: none;
+  }
+
+  footer{
+    margin-top: 40em;
+    margin-bottom: 10em;
+    width: 100%;
+  }
+  
+  .footer_section{
+    display: flex;
+    flex-direction: column;
+    margin-top: 0;
+    height: 19em;
+  }
+
+  .footer_img{
+    width: 13em;
+    margin-top: 3em;
+    margin-bottom: 2em;
+  }
+
+  .footer_page_links{
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .footer_pages{
+    margin-left: 0;
+  }
+
+  .footer_pages ul{
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_page_links ul li{
+    margin-right: 0;
+    margin-bottom: 2em;
+  }
+
+  .footer_social_links{
+
+    margin-bottom: 3em;
+  }
+
+  
+  }

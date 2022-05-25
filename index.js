@@ -16,7 +16,6 @@ const grindBtn = document.querySelector(".type4")
 const deliveryBtn = document.querySelector(".type5")
 
 const pref = document.getElementById("answer1").innerHTML
-// const btn = document.querySelector(".plan_create")
 
 
 const grind = document.getElementsByClassName("grind_op")
@@ -31,6 +30,7 @@ function accordionfn(){
   for (let i=0; i<accordion.length; i++){
     accordion[i].addEventListener('click', function(){
       this.classList.toggle('active');
+      // types[i].classList.toggle('active_color')
       let accordion_data = this.nextElementSibling;
 
       if (accordion_data.style.display === "flex"){
@@ -84,7 +84,6 @@ function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo, tot
           document.getElementById(elementIdNameOne).innerHTML = value
           document.getElementById(elementIdNameTwo).innerHTML = value
         } else {
-          // document.querySelector(".sentence").innerHTML = ""
           document.getElementById(elementIdNameOne).innerHTML = value
           document.getElementById(elementIdNameTwo).innerHTML = value
         }

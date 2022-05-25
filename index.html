@@ -8,6 +8,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="./style.css" />
   
   <title>Coffeeroasters subscription site</title>
@@ -15,8 +16,8 @@
 <body>
   <header>
     <nav>
-      <a href="index.html"><img src="assets/shared/desktop/logo.svg" alt="coffeeroasters" /></a>
-      <ul>
+      <a href="index.html"><img class="header_img" src="assets/shared/desktop/logo.svg" alt="coffeeroasters" /></a>
+      <ul class="mobile_menu tablet_menu desktop_menu">
         <li><a href="index.html">HOME</a></li>
         <li><a href="about.html">ABOUT US</a></li>
         <li><a href="plan.html">CREATE YOUR PLAN </a></li>
@@ -25,8 +26,8 @@
   </header>
 
   <section class="hero_section">
-    <img class="hero_img" src="assets/home/desktop/image-hero-coffeepress.jpg" alt="coffeepress" />
-
+    <!-- <img class="hero_img" src="assets/home/desktop/image-hero-coffeepress.jpg" alt="coffeepress" /> -->
+    <div class="hero_img"></div>
     <div class="hero_title">
       <h1>Great coffee made simple.</h1>
       <p>Start your mornings with the world’s best coffees. Try our expertly curated artisan 
@@ -141,13 +142,13 @@
       </div>
 
     </section>
-    <a class="button" href="plan.html">Create your plan</a>
+    <a class="home_button button" href="plan.html">Create your plan</a>
   </section>
 
   <footer>
     <section class="footer_section">
       <div class="footer_page_links">
-        <a href="index.html"><img src="assets/shared/desktop/footer-logo.svg" alt="coffeeroasters" /></a>
+        <a href="index.html"><img class="footer_img" src="assets/shared/desktop/footer-logo.svg" alt="coffeeroasters" /></a>
         <div class="footer_pages">
           <ul>
             <li><a class="footer_li" href="index.html">HOME</a></li>
