@@ -83,7 +83,7 @@ li{
 
 .hero_img{
   height: 37.5em;
-  background-image: url(/assets/home/desktop/image-hero-coffeepress.jpg);
+  background-image: url(assets/home/desktop/image-hero-coffeepress.jpg);
   background-size: cover;
 }
 
@@ -395,7 +395,7 @@ footer{
 
 .about_hero_img{
   height: 30.5em;
-  background-image: url(assets/plan/desktop/image-hero-blackcup.jpg);
+  background-image: url(assets/about/desktop/image-hero-whitecup.jpg);
   background-size: cover;
 }
 
@@ -512,11 +512,17 @@ footer{
   margin-bottom: 8em;
 }
 
+.plan_hero_img{
+  height: 30.5em;
+  background-image: url(assets/plan/desktop/image-hero-blackcup.jpg);
+  background-size: cover;
+}
+
 .plan_coffeeroasters_operation{
   padding: 8em;
   width: 85em;
   background-color: var(--middle-bg-color);
-  ;margin-bottom: 6em;
+  margin-bottom: 6em;
 }
 
 
@@ -693,7 +699,7 @@ footer{
 
 
 .question::after{
-  content: url(/assets/plan/desktop/icon-arrow.svg);
+  content: url(assets/plan/desktop/icon-arrow.svg);
   position: absolute;
   right: 0.011em;
   bottom: 0.29em;
@@ -708,7 +714,7 @@ footer{
 
 
 .accordion.active .question::after {
-  content: url(/assets/plan/desktop/icon-arrow-up.svg);
+  content: url(assets/plan/desktop/icon-arrow-up.svg);
   transition: 0.8s;
 } 
 
@@ -1065,7 +1071,7 @@ width: 33em; */
     height: 25em;
     background-size: cover;
     border-radius: 0.5em;
-    }
+  }
 
     .hero_title h2{
       font-size: var(--title-h4);
@@ -1148,5 +1154,98 @@ width: 33em; */
     #about_footer{
       margin-top: 50em;
     }
+
+    /*------------ PLAN ------------*/
+
+    .plan_hero_img{
+      background-image: url(assets/plan/mobile/image-hero-blackcup.jpg);
+    }
+
+    .coffeeroasters_operation_division{
+      display: none;
+    }
+
+    
+    .plan_coffeeroasters_operation{
+      padding: 0;
+      width: 100%;
+      margin: 0;
+      /* width: 25em; */
+    }
+
+    .plan_coffeeroasters_operation_process{
+      flex-direction: column;
+    }
+
+    .plan_coffeeroasters_operation_process_type p{
+      margin-right: 0;
+      width: 100%;
+    }
+
+    .coffee_selection{
+      margin-top: 5em;
+      width: 100%;
+    }
+
+    .coffee_selection_type{
+      display: none;
+    }
+
+    .coffee_selection_options{
+      width: 60%;
+    }
+
+    .question{
+      font-size: 1.2em;
+      /* width: 18%; */
+    }
+
+    .question::after{
+      left: 14.5em;
+      bottom: 0.8em;
+    }
+
+    .coffee_type{
+      display: flex;
+      flex-direction: column;
+      overflow: visible;
+      /* justify-content: space-between; */
+    }
+    
+    .coffee_type_options{
+      width: 166%;
+      margin-bottom: 1em;
+    }
+
+    .order_summary{
+      width: 166%;
+      height: 18em;
+    }
+
+    .order_summary_info{
+      font-size: 1.1em;
+    }
+
+    .create_plan_plan{
+      margin-bottom: 2em;
+    }
+
+    .plan_create{
+      right: 0;
+      left: 0;
+      height: 3.5em;
+      font-size: 1em;
+      margin: 5em auto;
+
+    }
+
+    .plan_footer{
+      margin-top: 20em;
+    }
+
+    #modal_btn{
+      height: 2em;
+    }
+
   
   }
