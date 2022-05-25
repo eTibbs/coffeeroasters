@@ -867,7 +867,7 @@ width: 33em; */
   }
   
   .hero_img{
-    background-image: url(/assets/home/mobile/image-hero-coffeepress.jpg);
+    background-image: url(assets/home/mobile/image-hero-coffeepress.jpg);
     height: 28em;
     background-size: cover;
     border-radius: 0.5em;
@@ -909,7 +909,7 @@ width: 33em; */
   }
 
   .collection_text p {
-    font-size: 2.5em;
+    font-size: 2.8em;
   }
 
   .collection_type{
