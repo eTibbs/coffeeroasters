@@ -393,8 +393,10 @@ footer{
   
 }
 
-.other_hero_img{
-  width: 85em;
+.about_hero_img{
+  height: 30.5em;
+  background-image: url(assets/plan/desktop/image-hero-blackcup.jpg);
+  background-size: cover;
 }
 
 .hero_title h2{
@@ -862,6 +864,8 @@ width: 33em; */
     width: 100%;
   }
 
+  /* ----------- INDEX PAGE -------------*/
+
   .header_img{
     width: 10em;
   }
@@ -885,7 +889,7 @@ width: 33em; */
   }
   
   .hero_title h1{
-    font-size: var(--title-h4);
+    font-size: var(--title-h3);
   }
 
   .hero_title p{
@@ -1053,5 +1057,95 @@ width: 33em; */
     margin-bottom: 3em;
   }
 
+  /* ------------- ABOUT PAGE ---------------*/
+
+  .about_hero_img{
+    background-image: url(assets/about/mobile/image-hero-whitecup.jpg);
+    height: 25em;
+    background-size: cover;
+    border-radius: 0.5em;
+    }
+
+    .hero_title h2{
+      font-size: var(--title-h4);
+      text-align: center;
+    }
+
+    .coffeeroasters_commitment_img img{
+      width: 100%;
+      background-size: cover;
+      border-radius: 0.5em;
+    }
+
+    .coffeeroasters_commitment{
+      margin: 3em auto;
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .coffeeroasters_commitment_text {
+      text-align: center;
+      width: 100%;
+    }
+
+    .coffeeroasters_commitment_text h2{
+      font-size: var(--title-h3);
+    }
+
+    .coffeeroasters_commitment_text p {
+      width: 100%;
+    }
+
+    .coffeeroasters_quality{
+      margin-top: 40em;
+      width: 100%;
+      flex-direction: column;
+    }
+
+    .coffeeroasters_quality_text{
+      height: 37em;
+      padding: 0;
+    }
+
+    .coffeeroasters_quality_text h2{
+      font-size: var(--title-h4);
+      width: 10em;
+      text-align: center;
+      margin: 5em auto 1em auto;
+    }
+
+    .coffeeroasters_quality_img{
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      width: 15em;
+      top: -7em;
+    }
+
+    .coffeeroasters_quality_img img {
+      border-radius: 0.5em;
+      width: 100%;
+      height: 10em;
+    }
+
+    .coffeeroasters_quality_text p{
+      width: 14em;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+
+    #coffee_op{
+      margin-top: 8em;
+    }
+    
+    #coffee_op_pro{
+      align-items: center;
+      text-align: center;
+    }
+
+    #about_footer{
+      margin-top: 50em;
+    }
   
   }
