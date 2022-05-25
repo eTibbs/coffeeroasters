@@ -1265,15 +1265,21 @@ width: 33em; */
 
     .modal_heading{
       font-size: 1.5em;
+      padding-left: 1.2em;
     }
 
     .modal_order_summary{
-      padding-left: 1em;
+      padding: 0.5em;
       padding-top: 0.5em;
+      margin-top: 1em;
+    }
+
+    .modal_content{
+      padding-top: 30px; 
     }
 
     .modal_correct_order{
-      padding-left: 1em;
+      padding: 0.5em;
     }
 
     .full{
@@ -1295,10 +1301,6 @@ width: 33em; */
 
     .checkout h3{
       font-size: 1.3em;
-    }
-
-    #total_charge{
-
     }
 
   
