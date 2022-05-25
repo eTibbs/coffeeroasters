@@ -854,9 +854,9 @@ width: 33em; */
   font-family: var(--font-fraunces), 'serif';
 }
 
-.mobile_checkout{
+/* .mobile_checkout{
   display: none;
-}
+} */
 
 
 
@@ -1276,22 +1276,9 @@ width: 33em; */
       padding-left: 1em;
     }
 
-    .full{
+    /* .full{
       display: none;
-    }
-
-    .mobile_checkout{
-      display: block;
-      
-    }
-
-    .mobile_button{
-      right: 0;
-      left: 0;
-      height: 3.5em;
-      font-size: 1em;
-      margin: 1em auto;
-    }
+    } */
 
     .checkout h3{
       font-size: 1.3em;

@@ -114,6 +114,7 @@ function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo, tot
 
         if (parseInt(opt.substr(1,6))){
           document.getElementById(totalCharge).innerHTML = opt.substr(1,6)
+          document.getElementById('modal_total_charge').innerHTML = opt.substr(1,6)
         }
           
     })
