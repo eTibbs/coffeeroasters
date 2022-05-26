@@ -650,6 +650,7 @@ footer{
   background-color: var(--option-default);
   border-radius: 0.4em;
   cursor: pointer;
+  color: var(--dark-grey-blue);
 }
 
 .coffee_type_options:hover{
@@ -658,7 +659,10 @@ footer{
 } 
 
 .head{
-  margin-bottom: 1em;
+  font-family: var(--font-fraunces);
+  margin-bottom: 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
 }
 
 .description{
@@ -867,6 +871,507 @@ width: 33em; */
 
 .mobile_checkout{
   display: none;
+}
+
+@media (min-width: 1025px) and (max-width: 1280px){
+  body {
+      background-color: green;
+  }
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px){
+  body {
+      margin: 0 60px;
+      width: 55em;
+  }
+
+  .hero_img{
+    border-radius: 0.5em;
+  }
+
+  /*------------- INDEX PAGE -------------- */
+
+  .collection_section{
+    margin: 6em 0;
+  }
+
+  .collection_type_coffee_text{
+    width: 10em;
+  }
+
+  .selection_reason_text{
+    width: 100%;
+  }
+
+  .selection_qualities{
+    top: 25em;
+  }
+
+  .selection_qualities_feature{
+    width: 15em;
+    height: 27em;
+  }
+
+  .selection_qualities_feature_text p {
+    width: 10em;
+  } 
+
+  .coffeeroasters_operation_process_type p{
+    width: 15em;
+  } 
+
+  /*------------- ABOUT PAGE -------------- */
+
+  .about_hero_img{
+    height: 26em;
+    border-radius: 0.5em;
+  }
+
+  .coffeeroasters_commitment_img{
+    margin-right: 2em;
+  }
+
+  .coffeeroasters_commitment{
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .about_coffee_op{
+    width: 100%;
+  }
+
+  .coffeeroasters_commitment_text p {
+    width: 25em;
+  }
+
+  .coffeeroasters_quality{
+    width: 100%;
+  }
+
+  .coffeeroasters_quality_text h2{
+    width: 10em;
+  }
+
+  .coffeeroasters_quality_text p{
+    width: 25em;
+  }
+
+  .coffeeroasters_quality_img{
+    right: 1em;
+    height: 17em;
+    width: 25em;
+  }
+
+  /*-------------- PLAN PAGE -------------------*/
+
+  .plan_coffeeroasters_operation{
+    width: 100%;
+  }
+
+  .coffeeroasters_operation{
+    width: 100%;
+  }
+
+  .coffee_selection{
+    justify-content: flex-start;
+    width: 100%;
+  }
+
+  .coffee_selection_type{
+    margin-right: 4em;
+  }
+  
+  .coffee_selection_options{
+    margin-top: 1.3em;
+
+  }
+
+  .plan_create{
+    right: 8em;
+  }
+
+  .plan_hero_img{
+    height: 26em;
+    border-radius: 0.5em;
+  }
+
+  .plan_coffeeroasters_operation_process{
+    width: 100%;
+  }
+
+  .plan_coffeeroasters_operation{
+    padding: 2em;
+  }
+
+  .plan_coffeeroasters_operation_process_type{
+    margin-right: 1.5em;
+  }
+
+  .plan_coffeeroasters_operation_process_type h2{
+    font-size: 1.5em;
+  }
+  
+  .plan_coffeeroasters_operation_process_type h3{
+    width: 7em;
+    font-size: 1em;
+  }
+  
+  .plan_coffeeroasters_operation_process_type p{
+    width: 15em;
+  }
+
+  /* ------------ MODAL -------------*/
+  .modal_div{
+    width: 50em;
+    margin: 0 auto;
+  }
+
+  .modal_order_summary{
+    padding-left: 1em;
+    padding-right: 0.7em;
+  }
+
+  .modal_correct_order{
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+}
+
+
+@media (min-width: 481px) and (max-width: 767px) {
+  body {
+    /* background-color: yellow; */
+    width: 35em;
+    margin: 0 72px;
+  }
+
+  /* -------- HERO SECTION ---------- */
+
+  .header_img{
+    width: 8em;
+  }
+
+  .tablet_menu{
+    font-size: 0.8em;
+  }
+
+  .hero_img{
+    background-image: url(assets/home/tablet/image-hero-coffeepress.jpg);
+    height: 28em;
+    background-size: cover;
+    border-radius: 0.5em;
+    }
+
+  .hero_title{
+    left: 3em;
+    top: 5em;
+  }
+
+  .hero_title h1{
+    font-size: var(--title-h4);
+  }
+
+  .hero_title p {
+    width: 24em;
+  }
+
+  /* -------- COLLECTION SECTION ---------- */
+
+  .collection_section{
+    margin: 5em auto;
+    width: 100%;
+  }
+
+  .collection_text p{
+    font-size: 5.8em;
+  }
+
+  .collection_type{
+    top: 4em;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    align-items: flex-start;
+  }
+
+  .collection_type_coffee{
+    display: flex;
+    align-items: flex-start;
+    margin-left: 5em;
+  }
+
+  .collection_type_coffee_text{
+    margin-top: 10px;
+    text-align: left;
+  }
+
+  .collection_type_coffee_text h4{
+    margin-bottom: 20px;
+  }
+
+  /* -------- COFFEEROASTERS SECLECTION SECTION ---------- */
+  .selection_reasons{
+    margin-top: 22em;
+  }
+  .selection_reason_text{
+    width: 100%;
+    position: relative;
+  }
+
+  .selection_reason_text p{
+    width: 25em;
+  }
+
+  .selection_qualities{
+    flex-direction: column;
+    position: absolute;
+    top: 50em;
+    left: 3em;
+    margin: 0 auto;
+  }
+
+  .selection_qualities_feature{
+    width: 30em;
+    height: 23em;
+    margin-bottom: 3em;
+    display: flex;
+    padding: 3em 5em;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .selection_qualities_feature img {
+    margin-top: 0;
+    margin-right: 2em;
+  }
+
+  .selection_qualities_feature_text h3{
+    margin: 0;
+  }
+
+  .selection_qualities_feature_text{
+    text-align: left;
+  }
+
+  /* -------- COFFEEROASTERS OPERATION SECTION ---------- */
+
+  .coffeeroasters_operation{
+    width: 100%;
+  }
+
+  .coffeeroasters_operation_oval{
+    height: 1em;
+    width: 1em;
+  }
+  
+  .coffeeroasters_operation_line{
+    width: 11.7em;
+  }
+
+  .coffeeroasters_operation_process{
+    width: 100%;
+  }
+
+  .coffeeroasters_operation_process_type{
+    margin-right: 0.4em;
+  }
+
+  .coffeeroasters_operation_process_type p{
+    width: 12em;
+  }
+
+  .coffeeroasters_operation_process_type h3{
+    font-size: 1.5em;
+  }
+
+  /*----------- FOOTER SECTION --------------*/
+
+  footer{
+    margin-bottom: 10em;
+    margin-top: 10em;
+  }
+  
+  .footer_section{
+    height: 15em;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_page_links{
+    margin-top: 2em;
+  }
+  
+  .footer_page_links{
+    width: 20em;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer_pages{
+    margin-top: 2em;
+  }
+
+  /* -------- ABOUT SECTION ---------- */
+  .hero_title h2{
+    font-size: var(--title-h4);
+  }
+
+  .about_hero_img{
+    height: 18em;
+    border-radius: 0.5em;
+  }
+
+  .other_hero_section{
+    height: 15em;
+    border-radius: 0.5em;
+  }
+
+  .other_hero_title{
+    font-size: 1em;
+  }
+
+  .coffeeroasters_commitment{
+    justify-content: flex-start;
+    margin-bottom: 10em;
+    width: 100%;
+  }
+
+  .coffeeroasters_commitment_img{
+    background-image: url(assets/about/tablet/image-commitment.jpg);
+    background-size: cover;
+    height: 35em;
+    width: 55%;
+    border-radius: 0.5em;
+    margin-right: 1.5em;
+  }
+
+  .coffeeroasters_commitment_text {
+    padding-top: 10px;
+  }
+
+  .coffeeroasters_commitment_text h2{
+    font-size: 1.7em;
+    margin-bottom: 1em;
+  }
+
+  .coffeeroasters_commitment_text p{
+    width: 17em;
+  }
+
+  .coffeeroasters_quality{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 1em;
+  }
+
+  .coffeeroasters_quality_text{
+    height: 30em;
+    padding: 0;
+  }
+
+  .coffeeroasters_quality_text h2{
+    font-size: 1.5em;
+    width: 70%;
+    text-align: center;
+    margin: 6em auto 1em auto;
+  }
+
+  .coffeeroasters_quality_text p{
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+
+  .coffeeroasters_quality_img{
+    background-image: url(assets/about/tablet/image-quality.jpg);
+    background-size: cover;
+    width: 70%;
+    margin: 0 auto;
+    height: 15em;
+    right: 0;
+    left: 0;
+    top: -3em;
+    border-radius: 0.5em;
+  }
+
+  .coffee_type_options{
+    margin-right: 0.5em;
+  }
+
+ .ind_coffee_op{
+    margin-top: 33em;
+  }
+
+  .location{
+    margin-right: 1em;
+  }
+
+
+  /*-------------- PLAN SECTION --------------*/
+
+  .coffee_selection{
+    width: 100%;
+  }
+  
+  .plan_hero_img{
+    background-image: url(assets/plan/tablet/image-hero-blackcup.jpg);
+    height: 20em;
+    background-size: cover;
+    border-radius: 0.5em ;
+  }
+
+  .plan_coffeeroasters_operation_line{
+    width: 12em;
+  }
+
+  .plan_coffeeroasters_operation{
+    width: 100%;
+    padding: 0.8em;
+    margin-top: 14.5em;
+    overflow: visible;
+  }
+
+  .plan_coffeeroasters_operation_process{
+    width: 100%;
+  }
+  
+  .plan_coffeeroasters_operation_process_type h2{
+    font-size: 1.5em;
+  }
+
+  .plan_coffeeroasters_operation_process_type h3{
+    font-size: 1.2em;
+  }
+
+  .plan_coffeeroasters_operation_process_type p{
+    font-size: 1em;
+    width: 10em;
+  }
+
+  .coffee_selection_type{
+    display: none;
+  }
+
+  .modal_div{
+    width: 38em;
+    margin: 0 auto;
+  }
+
+  .modal_order_summary{
+    padding-left: 1em;
+    padding-right: 0.7em;
+  }
+
+  .modal_correct_order{
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 35em;
+  }
 }
 
 
@@ -1318,318 +1823,8 @@ width: 33em; */
       font-size: 1.3em;
     }
 
-  
-  }
-
-
-  @media (min-width: 481px) and (max-width: 767px) {
-    body {
-      background-color: yellow;
-      /* width: 36em; */
-      margin: 0 60px;
-    }
-
-    /* -------- HERO SECTION ---------- */
-
-    .header_img{
-      width: 8em;
-    }
-
-    .tablet_menu{
-      font-size: 0.8em;
-    }
-
-    .hero_img{
-      background-image: url(assets/home/tablet/image-hero-coffeepress.jpg);
-      height: 28em;
-      background-size: cover;
-      border-radius: 0.5em;
-      }
-
-    .hero_title{
-      left: 3em;
-      top: 5em;
-    }
-
-    .hero_title h1{
-      font-size: var(--title-h4);
-    }
-
-    .hero_title p {
-      width: 24em;
-    }
-
-    /* -------- COLLECTION SECTION ---------- */
-
-    .collection_section{
-      margin: 5em auto;
-      width: 100%;
-    }
-
-    .collection_text p{
-      font-size: 5.8em;
-    }
-
-    .collection_type{
-      top: 4em;
-      flex-direction: column;
-      justify-content: flex-start;
-      text-align: left;
-      align-items: flex-start;
-    }
-
-    .collection_type_coffee{
-      display: flex;
-      align-items: flex-start;
-      margin-left: 5em;
-    }
-
-    .collection_type_coffee_text{
-      margin-top: 10px;
-      text-align: left;
-    }
-
-    .collection_type_coffee_text h4{
-      margin-bottom: 20px;
-    }
-
-    /* -------- COFFEEROASTERS SECLECTION SECTION ---------- */
-    .selection_reasons{
-      margin-top: 22em;
-    }
-    .selection_reason_text{
-      width: 100%;
-      position: relative;
-    }
-
-    .selection_reason_text p{
-      width: 25em;
-    }
-
-    .selection_qualities{
-      flex-direction: column;
-      position: absolute;
-      top: 50em;
-      left: 3em;
-      margin: 0 auto;
-    }
-
-    .selection_qualities_feature{
-      width: 30em;
-      height: 23em;
-      margin-bottom: 3em;
-      display: flex;
-      padding: 3em 5em;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .selection_qualities_feature img {
-      margin-top: 0;
-      margin-right: 2em;
-    }
-
-    .selection_qualities_feature_text h3{
-      margin: 0;
-    }
-
-    .selection_qualities_feature_text{
-      text-align: left;
-    }
-
-    /* -------- COFFEEROASTERS OPERATION SECTION ---------- */
-
-  
-
-    .coffeeroasters_operation_oval{
-      height: 1em;
-      width: 1em;
-    }
-    
-    .coffeeroasters_operation_line{
-      width: 11.7em;
-    }
-
-    .coffeeroasters_operation_process{
-      width: 100%;
-    }
-
-    .coffeeroasters_operation_process_type{
-      margin-right: 0.4em;
-    }
-
-    .coffeeroasters_operation_process_type p{
-      width: 12em;
-    }
-
-    .coffeeroasters_operation_process_type h3{
-      font-size: 1.5em;
-    }
-
-    /*----------- FOOTER SECTION --------------*/
-
-    footer{
-      margin-bottom: 10em;
-      margin-top: 10em;
-    }
-    
-    .footer_section{
-      height: 15em;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .footer_page_links{
-      margin-top: 2em;
-    }
-    
-    .footer_page_links{
-      width: 20em;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-    }
-
-    .footer_pages{
-      margin-top: 2em;
-    }
-
-    /* -------- ABOUT SECTION ---------- */
-    .hero_title h2{
-      font-size: var(--title-h4);
-    }
-
-    .about_hero_img{
-      height: 18em;
-      border-radius: 0.5em;
-    }
-
-    .other_hero_section{
-      height: 15em;
-      border-radius: 0.5em;
-    }
-
-    .other_hero_title{
-      font-size: 1em;
-    }
-
-    .coffeeroasters_commitment{
-      justify-content: flex-start;
-      margin-bottom: 10em;
-    }
-
-    .coffeeroasters_commitment_img{
-      background-image: url(assets/about/tablet/image-commitment.jpg);
-      background-size: cover;
-      height: 35em;
-      width: 25%;
-      border-radius: 0.5em;
-      margin-right: 1.5em;
-    }
-
-    .coffeeroasters_commitment_text {
-      padding-top: 10px;
-    }
-
-    .coffeeroasters_commitment_text h2{
-      font-size: 1.7em;
-      margin-bottom: 1em;
-    }
-
-    .coffeeroasters_commitment_text p{
-      width: 17em;
-    }
-
-    .coffeeroasters_quality{
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      margin-top: 1em;
-    }
-
-    .coffeeroasters_quality_text{
-      height: 30em;
-      padding: 0;
-    }
-
-    .coffeeroasters_quality_text h2{
-      font-size: 1.5em;
-      width: 70%;
-      text-align: center;
-      margin: 6em auto 1em auto;
-    }
-
-    .coffeeroasters_quality_text p{
-      width: 80%;
-      margin: 0 auto;
-      text-align: center;
-    }
-
-
-    .coffeeroasters_quality_img{
-      background-image: url(assets/about/tablet/image-quality.jpg);
-      background-size: cover;
-      width: 70%;
-      margin: 0 auto;
-      height: 15em;
-      right: 0;
-      left: 0;
-      top: -3em;
-      border-radius: 0.5em;
-    }
-
-   .ind_coffee_op{
-      margin-top: 33em;
-    }
-
-    .location{
-      margin-right: 1em;
-    }
-
-
-    /*-------------- PLAN SECTION --------------*/
-
-    .coffee_selection{
-      width: 100%;
-    }
-    
-    .plan_hero_img{
-      background-image: url(assets/plan/tablet/image-hero-blackcup.jpg);
-      height: 25em;
-      background-size: cover;
-      border-radius: 0.5em ;
-    }
-
-    .plan_coffeeroasters_operation_line{
-      width: 12em;
-    }
-
-    .plan_coffeeroasters_operation{
-      width: 100%;
-      padding: 0.8em;
-      margin-top: 14.5em;
-      overflow: visible;
-    }
-
-    .plan_coffeeroasters_operation_process{
-      width: 100%;
-    }
-    
-    .plan_coffeeroasters_operation_process_type h2{
-      font-size: 1.5em;
-    }
-
-    .plan_coffeeroasters_operation_process_type h3{
-      font-size: 1.2em;
-    }
-
-    .plan_coffeeroasters_operation_process_type p{
-      font-size: 1em;
-      width: 10em;
-    }
-
-    .coffee_selection_type{
-      display: none;
-    }
-
 }
+
+
+
+
