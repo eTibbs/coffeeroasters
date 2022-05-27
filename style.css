@@ -873,6 +873,10 @@ width: 33em; */
   display: none;
 }
 
+.mobi{
+  display: none;
+}
+
 @media (min-width: 768px) and (max-width: 1024px){
   body {
       margin: 0 60px;
@@ -1377,6 +1381,13 @@ width: 33em; */
 
   .mobile_menu{
     display: none;
+  }
+
+  .mobi{
+    height: 5em;
+    width: 5em;
+    background-color: red;
+    display: block;
   }
 
   header{

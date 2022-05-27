@@ -25,7 +25,16 @@ const grind_accord = document.querySelector(".grind_accord")
 const modal = document.getElementById('modal')
 const modalBtn = document.getElementById("modalbtn")
 
-modalBtn.classList.add('disable_button')
+
+function myFunction() {
+  var x = document.getElementById("mob_menu");
+  if (x.style.display === "block") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
 
 function firstAccord(){
   accordion_data[0].style.display = "flex"
@@ -70,15 +79,7 @@ function typesColor(classNameList){
   }
 }
 
-function modalCharge(charge, amt){
-  if (charge === '250g'){
-    document.getElementById('modal_total_charge').innerHTML = amt
-  } else if (charge === '500g'){
-    document.getElementById('modal_total_charge').innerHTML = amt
-  } else if (charge === '1000g'){
-    document.getElementById('modal_total_charge').innerHTML = amt
-  }
-}
+
 
 function coffeeCost(value){
 
@@ -148,7 +149,7 @@ function capSentence(value){
 }
 
 
-function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo, totalCharge=""){
+function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo){
   for (let option of classNameList){
     option.addEventListener('click', function(){
       for (let option of classNameList){
@@ -199,4 +200,4 @@ orderSummaryData(preferences, 'answer1', 'modal1')
 orderSummaryData(beanType, 'answer2', 'modal2')
 orderSummaryData(quantity, 'answer3', 'modal3')
 orderSummaryData(grindOption, 'answer4', 'modal4')
-orderSummaryData(deliveries, 'answer5', 'modal5', 'total_charge')
+orderSummaryData(deliveries, 'answer5', 'modal5')
