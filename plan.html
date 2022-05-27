@@ -178,15 +178,15 @@
         <div class="coffee_type accordion_data">
           <div class="coffee_type_options deliver">
             <p class="head">Every week</p>
-            <p class="description">$14.00 per shipment. Includes free first-class shipping.</p>
+            <p class="description">$<span class="desc1">14.00</span> per shipment. Includes free first-class shipping.</p>
           </div>
           <div class="coffee_type_options deliver">
             <p class="head">Every 2 weeks</p>
-            <p class="description">$17.25 per shipment. Includes free priority shipping.</p>
+            <p class="description">$<span class="desc2">17.25</span> per shipment. Includes free priority shipping.</p>
           </div>
           <div class="coffee_type_options deliver">
             <p class="head">Every month</p>
-            <p class="description">$22.50 per shipment. Includes free priority shipping.</p>
+            <p class="description">$<span class="desc3">22.50</span> per shipment. Includes free priority shipping.</p>
           </div>
         </div>
       </div>
@@ -195,8 +195,8 @@
         <div class="order_summary_div">
           <p class="order_summary_text">ORDER SUMMARY</p>
           <div class="order_summary_info">
-            <h4 class="order_text">“I drink coffee <span id="answer1" class="answer">Capsules</span>, 
-              with a <span id="answer2" class="answer">________</span> type of bean. <span id="answer3" class="answer">________</span> <span class="sentence"></span> <span id="answer4" class="answer">________</span>, 
+            <h4 class="order_text">“I drink my coffee <span class="sentences"> </span> <span class="sentence"></span> <span id="answer1" class="answer">Capsules</span>, 
+              with a <span id="answer2" class="answer">________</span> type of bean. <span id="answer3" class="answer">________</span> <span id="answer4" class="answer">________</span>, 
               sent to me <span id="answer5" class="answer">________</span>.”
             </h4>
           </div>
@@ -205,7 +205,7 @@
     </section>
   </section>
   <section class="create_plan_plan">
-    <a id="modalbtn" class="button plan_create">Create your plan!</a>
+    <a onclick="calculateAmt" id="modalbtn" class="button plan_create">Create your plan!</a>
   </section>
 
 

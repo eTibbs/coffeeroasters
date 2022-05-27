@@ -1,4 +1,5 @@
 const accordion = document.getElementsByClassName('accordion')
+const accordion_data = document.getElementsByClassName('accordion_data')
 const types = document.getElementsByClassName('type')
 const preferences = document.getElementsByClassName("preference")
 const beanType = document.getElementsByClassName("bean")
@@ -7,7 +8,6 @@ const grindOption = document.getElementsByClassName("grind")
 const deliveries = document.getElementsByClassName("deliver")
 
 
-// console.log(grindOption)
 
 const prefBtn = document.querySelector(".type1")
 const beanBtn = document.querySelector(".type2")
@@ -25,12 +25,16 @@ const grind_accord = document.querySelector(".grind_accord")
 const modal = document.getElementById('modal')
 const modalBtn = document.getElementById("modalbtn")
 
+modalBtn.classList.add('disable_button')
+
+function firstAccord(){
+  accordion_data[0].style.display = "flex"
+}
 
 function accordionfn(){
   for (let i=0; i<accordion.length; i++){
     accordion[i].addEventListener('click', function(){
       this.classList.toggle('active');
-      // types[i].classList.toggle('active_color')
       let accordion_data = this.nextElementSibling;
 
       if (accordion_data.style.display === "flex"){
@@ -66,6 +70,83 @@ function typesColor(classNameList){
   }
 }
 
+function modalCharge(charge, amt){
+  if (charge === '250g'){
+    document.getElementById('modal_total_charge').innerHTML = amt
+  } else if (charge === '500g'){
+    document.getElementById('modal_total_charge').innerHTML = amt
+  } else if (charge === '1000g'){
+    document.getElementById('modal_total_charge').innerHTML = amt
+  }
+}
+
+function coffeeCost(value){
+
+  const week = document.querySelector(".desc1")
+  const twoWeeks = document.querySelector(".desc2")
+  const month = document.querySelector(".desc3")
+
+
+  if (value === '250g'){
+    week.innerHTML = '7.20'
+    twoWeeks.innerHTML = '9.60'
+    month.innerHTML = '12.00'
+
+  } else if (value === '500g'){
+    week.innerHTML = '13.00'
+    twoWeeks.innerHTML = '17.50'
+    month.innerHTML = '22.00'
+
+  } else if (value === '1000g'){
+    week.innerHTML = '22.00'
+    twoWeeks.innerHTML = '32.50'
+    month.innerHTML = '42.00'
+  }
+
+  const weekCost = parseFloat(week.innerHTML * 4)
+  const twoWeekCost = parseFloat(twoWeeks.innerHTML * 2)
+  const monthCost = parseFloat(month.innerHTML)
+
+  if (value === 'Every week'){
+    document.getElementById("total_charge").innerHTML = weekCost
+  } else if (value === 'Every 2 weeks') {
+    document.getElementById("total_charge").innerHTML = twoWeekCost
+  } else if (value === 'Every month'){
+    document.getElementById("total_charge").innerHTML = monthCost
+  }
+
+}
+
+function grindDisable(coffee){
+  if (coffee === "Capsule"){
+    for (let option of grindOption){
+      option.classList.remove('active_color')
+    }
+    document.querySelector(".sentence").innerHTML = ""
+    if (grind_div.style.display === "flex"){
+      grind_accord.classList.remove('active')
+      grind_div.style.display = "none"
+    }
+    for (let g of grind){
+      g.classList.add("disable_grind")
+      document.getElementById("answer4").innerHTML = ""
+    }
+  } else {
+    for (let g of grind){
+      g.classList.remove("disable_grind")
+    }
+  }
+}
+
+function capSentence(value){
+  if (value === 'Capsule'){
+    document.querySelector(".sentences").innerHTML = 'using'
+  } else if (value === 'Filter' || value === 'Espresso') {
+    document.querySelector(".sentences").innerHTML = ''
+    document.querySelector(".sentence").innerHTML = 'as'
+  }
+}
+
 
 function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo, totalCharge=""){
   for (let option of classNameList){
@@ -74,49 +155,18 @@ function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo, tot
         option.classList.remove('active_color')
       }
         option.classList.add('active_color')
-
-        console.log(option)
-
+        
         const value = option.children[0].innerHTML
 
-        if (value === 'Cafetiére'){
-          document.querySelector(".sentence").innerHTML = `ground a la`
-          document.getElementById(elementIdNameOne).innerHTML = value
-          document.getElementById(elementIdNameTwo).innerHTML = value
-        } else {
-          document.getElementById(elementIdNameOne).innerHTML = value
-          document.getElementById(elementIdNameTwo).innerHTML = value
-        }
+        coffeeCost(value)
+        capSentence(value)
+       
+        document.getElementById(elementIdNameOne).innerHTML = value
+        document.getElementById(elementIdNameTwo).innerHTML = value
         
-
         const coffee = document.getElementById("answer1").innerHTML
 
-        if (coffee === "Capsule"){
-          for (let option of grindOption){
-            option.classList.remove('active_color')
-          }
-          document.querySelector(".sentence").innerHTML = ""
-          if (grind_div.style.display === "flex"){
-            grind_accord.classList.remove('active')
-            grind_div.style.display = "none"
-          }
-          for (let g of grind){
-            g.classList.add("disable_grind")
-            document.getElementById("answer4").innerHTML = ""
-          }
-        } else {
-          for (let g of grind){
-            g.classList.remove("disable_grind")
-          }
-        }
-
-        const opt = option.children[1].innerHTML
-
-        if (parseInt(opt.substr(1,6))){
-          document.getElementById(totalCharge).innerHTML = opt.substr(1,6)
-          document.getElementById('modal_total_charge').innerHTML = opt.substr(1,6)
-        }
-          
+        grindDisable(coffee)          
     })
   }
 }
@@ -132,7 +182,7 @@ window.onclick = function(event) {
   }
 }
 
-
+firstAccord()
 
 sideAccordion(prefBtn, 0)
 sideAccordion(beanBtn, 1)
