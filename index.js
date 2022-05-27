@@ -15,8 +15,6 @@ const quantityBtn = document.querySelector(".type3")
 const grindBtn = document.querySelector(".type4")
 const deliveryBtn = document.querySelector(".type5")
 
-const pref = document.getElementById("answer1").innerHTML
-
 
 const grind = document.getElementsByClassName("grind_op")
 const grind_div = document.getElementById("grind_div")
@@ -26,15 +24,23 @@ const modal = document.getElementById('modal')
 const modalBtn = document.getElementById("modalbtn")
 
 
-function myFunction() {
-  var x = document.getElementById("mob_menu");
-  if (x.style.display === "block") {
-    x.style.display = "none";
-  } else {
-    x.style.display = "block";
+const menuBtn = document.querySelector(".mobile_btn");
+const navMenu = document.querySelector(".mobile_menu");
+const toggleBtn = document.querySelector("#toggleBtn");
+
+function toggleMenuBtn() {
+  console.log("togglleee")
+  navMenu.classList.toggle("close");
+  if (toggleBtn.src.match("assets/shared/mobile/icon-hamburger.svg")) {
+    toggleBtn.src = "assets/shared/mobile/icon-close.svg";
+    navMenu.style.display = 'block'
+  } else if (toggleBtn.src.match("assets/shared/mobile/icon-close.svg")) {
+    toggleBtn.src = "assets/shared/mobile/icon-hamburger.svg";
+    navMenu.style.display = 'none'
   }
 }
 
+menuBtn.addEventListener("click", toggleMenuBtn);
 
 function firstAccord(){
   accordion_data[0].style.display = "flex"
@@ -158,7 +164,7 @@ function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo){
         option.classList.add('active_color')
         
         const value = option.children[0].innerHTML
-
+        
         coffeeCost(value)
         capSentence(value)
        
@@ -166,12 +172,12 @@ function orderSummaryData(classNameList, elementIdNameOne, elementIdNameTwo){
         document.getElementById(elementIdNameTwo).innerHTML = value
         
         const coffee = document.getElementById("answer1").innerHTML
-
+        
         grindDisable(coffee)          
-    })
+      })
+    }
   }
-}
-
+  
 
 modalBtn.onclick = function(){
   modal.style.display = 'block'
@@ -201,3 +207,6 @@ orderSummaryData(beanType, 'answer2', 'modal2')
 orderSummaryData(quantity, 'answer3', 'modal3')
 orderSummaryData(grindOption, 'answer4', 'modal4')
 orderSummaryData(deliveries, 'answer5', 'modal5')
+
+
+

@@ -50,6 +50,15 @@ header{
   margin-bottom: 30px;
   font-family: 'Barlow', sans-serif;
   font-weight: 500;
+  position: relative;
+}
+
+.mobile_btn {
+  display: none;
+}
+
+.mobile_menu{
+  display: none;
 }
 
 nav{
@@ -74,6 +83,10 @@ li{
   list-style: none;
   letter-spacing: var(--navigation-menu-letter-spacing);
 } 
+
+.mobile-nav {
+  display: none;
+}
 
 /* -------- HERO SECTION ---------- */
 
@@ -877,10 +890,18 @@ width: 33em; */
   display: none;
 }
 
+.mobile-nav__toggle{
+  display: none;
+}
+
 @media (min-width: 768px) and (max-width: 1024px){
   body {
-      margin: 0 60px;
-      width: 55em;
+      margin: 0 100px;
+      width: 45em;
+  }
+
+  .mobi{
+    display: none;
   }
 
   .hero_img{
@@ -1255,7 +1276,7 @@ width: 33em; */
   }
 
   .coffeeroasters_commitment_text p{
-    width: 17em;
+    width: 20em;
   }
 
   .coffeeroasters_quality{
@@ -1369,6 +1390,8 @@ width: 33em; */
     padding-right: 1em;
     width: 35em;
   }
+
+  
 }
 
 
@@ -1379,19 +1402,50 @@ width: 33em; */
       margin: 0 auto;
   }
 
-  .mobile_menu{
+  .desktop_menu{
     display: none;
   }
 
-  .mobi{
-    height: 5em;
-    width: 5em;
-    background-color: red;
+  .mobile_btn {
     display: block;
+    position: absolute;
+    right: 0.2em;
+    padding: 0.4rem;
   }
+
+  .mobile_menu {
+    position: absolute;
+    top: 2em;
+    left: 0;
+    right: 2em;
+    width: 100%;
+    z-index: 1;
+    min-height: 20rem;
+    height: 100vh;
+    background: #fefcf7;
+    background: -webkit-gradient(linear, left bottom, left top, from(rgba(254, 252, 247, 0.5)), color-stop(55%, #fefcf7));
+    background: linear-gradient(0deg, rgba(254, 252, 247, 0.5) 0%, #fefcf7 55%);
+  }
+
+  .mobile_nav_list{
+    display: flex;
+    flex-direction: column;
+    font-weight: bold;
+    font-size: 1.5em;
+  }
+
+  .mobile_nav_item{
+    margin-bottom: 2em;
+  }
+
+  .one{
+    margin-top: 2em;
+  }
+  
 
   header{
     width: 100%;
+    position: relative;
   }
 
   /* ----------- INDEX PAGE -------------*/
@@ -1602,7 +1656,7 @@ width: 33em; */
       text-align: center;
     }
 
-    .coffeeroasters_commitment_img img{
+    .coffeeroasters_commitment_img{
       width: 100%;
       background-size: cover;
       border-radius: 0.5em;
@@ -1612,6 +1666,7 @@ width: 33em; */
       margin: 3em auto;
       width: 100%;
       flex-direction: column;
+      height: 54em;
     }
 
     .coffeeroasters_commitment_text {
